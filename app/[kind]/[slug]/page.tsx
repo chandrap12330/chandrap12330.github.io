@@ -11,7 +11,11 @@ export async function generateStaticParams() {
   return all.flatMap((items) => items.map(({ kind, slug }) => ({ kind, slug })));
 }
 
-export default async function ArticlePage({ params }: { params: Promise<{ kind: string; slug: string }> }) {
+export default async function ArticlePage({
+  params
+}: {
+  params: Promise<{ kind: string; slug: string }>;
+}) {
   const { kind, slug } = await params;
   if (!kinds.includes(kind as ContentKind)) notFound();
   const item = await getContentItem(kind as ContentKind, slug);
@@ -19,17 +23,25 @@ export default async function ArticlePage({ params }: { params: Promise<{ kind: 
 
   return (
     <article className="article">
-      <Link className="back-link" href={`/${kind}/`}>← Back to {kind}</Link>
+      <Link className="back-link" href={`/${kind}/`}>
+        ← Back to {kind}
+      </Link>
       <header className="article-header">
         <p className="eyebrow">{item.status ?? kind}</p>
         <h1>{item.title}</h1>
         <p className="article-summary">{item.summary}</p>
         <div className="card-meta">
           {item.date && <time dateTime={item.date}>{formatDate(item.date)}</time>}
-          {item.link && <a href={item.link} target="_blank" rel="noreferrer">External link ↗</a>}
+          {item.link && (
+            <a href={item.link} target="_blank" rel="noreferrer">
+              External link ↗
+            </a>
+          )}
         </div>
       </header>
-      <div className="prose"><MDXRemote source={item.body} /></div>
+      <div className="prose">
+        <MDXRemote source={item.body} />
+      </div>
     </article>
   );
 }

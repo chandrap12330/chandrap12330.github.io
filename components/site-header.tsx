@@ -10,7 +10,7 @@ export function SiteHeader() {
   return (
     <header className="site-header">
       <Link className="wordmark" href="/" aria-label="Home">
-        Chandrap
+        Chandra Prakash
       </Link>
       <nav aria-label="Primary navigation">
         {navigation.map(([label, href]) => (
@@ -18,7 +18,11 @@ export function SiteHeader() {
             {label}
           </Link>
         ))}
-        <a href="https://github.com/chandrap12330" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/chandra-prakash-94"
+          target="_blank"
+          rel="noreferrer"
+        >
           GitHub ↗
         </a>
       </nav>

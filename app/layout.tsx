@@ -5,13 +5,16 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "Chandrap — AI engineering notes and projects",
-    template: "%s — Chandrap"
+    default: "Chandra Prakash — AI engineering notes and projects",
+    template: "%s — Chandra Prakash"
   },
-  description: "A growing record of AI engineering, open-source work, projects, and notes."
+  description:
+    "A growing record of AI engineering, open-source work, projects, and notes."
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
