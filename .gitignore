@@ -117,6 +117,13 @@ ipython_config.py
 .pdm-python
 .pdm-build/
 
+# Next.js / Node
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+
 # pixi
 #   Similar to Pipfile.lock, it is generally recommended to include pixi.lock in version control.
 # pixi.lock
