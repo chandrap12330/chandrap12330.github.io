@@ -37,7 +37,7 @@ export default async function Home() {
               LinkedIn ↗
             </a>
             <a
-              href="https://drive.google.com/file/d/1nMN1VrOEqPSA2F4b87KiYNm2kEFecPXE/view?usp=sharing"
+              href="https://drive.google.com/file/d/1sXqpQnDLJE0wIQMXvmLfPpklz3hGgb48/view?usp=drive_link"
               target="_blank"
               rel="noreferrer"
             >
